@@ -1,0 +1,246 @@
+body{
+    background-image:linear-gradient(120deg,orange,red,pink);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#heading{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:wheat;
+    text-align: center;
+}
+.container{
+    align-items: center;
+    margin-left:22%;
+   
+}
+
+.con{
+    border-radius: 10px;
+    overflow-y:scroll;
+}
+
+.container ::-webkit-scrollbar{
+    display: none;
+}
+.form-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(18, 8, 3);
+}
+span{
+    font-size:large ;
+    margin-left: 10px;
+}
+
+#exampleFormControlTextarea1{
+    background-color: rgb(244, 114, 74);
+    border: none;
+    
+}
+#exampleFormControlTextarea1::placeholder{
+    color:black
+    
+}
+
+.form-select{
+    background-color: rgb(244, 114, 74);
+    border: none;
+}
+.select{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.my{
+    background-color: rgb(244, 114, 74);
+    border: none;
+}
+.div1{
+    margin-left: 0px;
+    margin-right:5px;
+    width:50%;
+}
+.div2{
+    width:50%;
+}
+
+p{
+    margin-left:2rem;
+    font-size: 15px;
+}
+.category{
+    background-color: blueviolet;
+    height:50px;
+    width:100px;
+    border-radius: 5px;
+}
+label{
+    color:rgb(95, 93, 93);
+    text-transform:uppercase;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight:normal;
+    padding-left: 15px;
+}
+
+/* Various Customizations for description input box of app*/
+#desc-div{
+    margin-top: 5px;
+}
+
+#desc-input{
+    width: 100%;
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 5px 15px;
+    outline: none;
+    background-color: rgb(249, 114, 91);
+    border-radius: 5px;
+}
+#desc-input::placeholder{
+    color:black
+}
+
+
+/* Settings for data div which contain category and date input fields */
+#data-div{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Various Settings for Category select box in the app */
+#category-div{
+    flex-grow: 1;
+    margin-top: 5px;
+}
+
+#category{
+    width: 80%;
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 5px 15px;
+    outline: none;
+  
+    color:rgb(25, 13, 13);
+    font-weight: bold;
+    background-color: rgb(249, 114, 91);
+    border-radius: 5px;
+}
+
+/* Various Settings for date input box in the app */
+#date{
+    width: 80%;
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 5px 15px;
+    outline: none;
+    color:rgb(14, 10, 10);
+    font-weight: bold;
+    background-color: rgb(249, 114, 91);
+    border-radius: 5px;
+}
+
+#date-div{
+    flex-grow: 1;
+    margin-top: 5px;
+}
+
+/* Various Customization for Action Buttons which contains 'add' and 'delete' buttons */
+#action-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+}
+
+#action-buttons button *{
+    color: white;
+}
+
+#action-buttons button{
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 15px 0px;
+}
+
+#action-buttons button span{
+    text-transform: uppercase;
+}
+
+#add-button{
+    background-color:rgb(107, 101, 101);
+    margin-right: 5px;
+    font-size: 20px;
+    width:100%;
+    border-radius: 5px;
+}
+
+#delete-button{
+    background-color:red;
+    margin-left: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+/* Set hover property which is applied to all buttons */
+button:hover{
+    background-color: orange !important;
+}
+
+
+/* Customizations to show all the added tasks list in the app */
+#tasks-list-form{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border-top: 0;
+    border-bottom: 0;
+   
+}
+
+.task{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgb(229, 187, 132);
+    padding-left: 3px;
+    padding-right:3px;
+    border-radius: 5px;
+    
+   
+}
+
+
+.task-data{
+    
+    width: 100%;
+}
+
+.task-data *{
+    color:rgb(10, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-data p{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-data span{
+    font-size:13px;
+}
+
+.task button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    color: white;
+    text-transform: uppercase;
+}

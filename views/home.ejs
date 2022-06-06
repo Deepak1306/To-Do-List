@@ -1,0 +1,95 @@
+<html>
+  <head>
+     <title>To Do App</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <link rel="stylesheet" href="/home.css" type="text/css">
+  </head>
+<body>
+   <h1 id="heading">To Do List</h1>
+   <div class="container">
+      <div class="row">
+         <div class="col-8 con shadow-lg p-3 mb-5 rounded"" style="background-color:tomato; height:600px;">
+              
+            <form action="/action/create-task" method="POST">
+               <!-- Div for description input -->
+               <div id="desc-div">
+                   <label for="desc-input"> description </label>
+                   <input type="text" name="description" id="desc-input" placeholder="What do you need to do ?" required>
+               </div>
+               
+               <!-- Div for data inputs (i.e: category and Date) -->
+               <div id="data-div">
+                   <!-- div for category selection option -->
+                   <div id="category-div">
+                       <label for="category"> Category </label>
+   
+                       <select name="category" id="category">
+                           <option value="n/a"> Choose a category </option>
+                           <option value="personal">Personal</option>
+                           <option value="work">Work</option>
+                           <option value="school">School</option>
+                           <option value="cleaning">Cleaning</option>
+                           <option value="other">Other</option>
+                       </select>
+                   </div>
+   
+   
+                   <!-- Div for date input -->
+                   <div id="date-div">
+                       <div>
+                           <label for="date"> Due Date </label>
+                           <input type="date" id="date" name="date">
+                       </div>
+                   </div>
+               </div>
+   
+   
+               <!-- Contains Action Buttons (i.e: Add and Delete ) -->
+               <div id="action-buttons">
+   
+                   <!-- button to add a new task and sumbit form -->
+                   <button id="add-button" type="submit"> 
+                       <i class="fas fa-plus"></i>
+                       <span>Add Task</span> 
+                   </button>
+   
+                   <!-- button to delete all the selected tasks -->
+                   <button id="delete-button" type="submit" form="tasks-list-form">
+                       <i class="fas fa-trash-alt"></i>
+                       <span>Delete Tasks</span>
+                   </button>
+               </div>
+   
+           </form>
+
+           <form action="/action/delete-tasks" method="POST" id="tasks-list-form">
+               <hr>
+            <% for(let i of task_list){%>
+                 <div class="task">
+                    <input id="check" type="checkbox" name="id" value="<%=i.id%>">
+                    <div class="task-data">
+                     <p><%=i.description%></p>
+                     
+                     <span><i class="fa-solid fa-calendar-day" style="margin-right: 2px;"></i><%=i.date%></span>
+                     </div>
+                     <button type="button" style="background-color:<%=color_list[i.category]%>;"><%=i.category%></button>
+                 </div>
+                 <hr>
+            <%}%>
+
+            </form>
+
+
+         </div>
+      </div>
+         
+   </div> 
+
+  
+   <script src="https://kit.fontawesome.com/2b49731cc8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
